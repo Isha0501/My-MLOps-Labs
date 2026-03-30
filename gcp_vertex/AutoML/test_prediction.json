@@ -1,0 +1,17 @@
+{
+  "instances": [
+    {
+      "Income": 1200000,
+      "Age": 35,
+      "Experience": 8,
+      "Married.Single": "married",
+      "House_Ownership": "rented",
+      "Car_Ownership": "no",
+      "Profession": "Software_Engineer",
+      "CITY": "Mumbai",
+      "STATE": "Maharashtra",
+      "CURRENT_JOB_YRS": 3,
+      "CURRENT_HOUSE_YRS": 5
+    }
+  ]
+}

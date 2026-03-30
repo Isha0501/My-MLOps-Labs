@@ -60,8 +60,8 @@ def main():
     print(classification_report(y_test, y_pred))
     print(f"ROC-AUC Score: {roc_auc_score(y_test, y_prob):.4f}")
 
-    # --- Save model locally ---
-    local_model_path = "model.joblib"
+    # --- Save model locally as model.pkl (required by Vertex AI sklearn container) ---
+    local_model_path = "model.pkl"
     joblib.dump(pipeline, local_model_path)
     print(f"Model saved locally as {local_model_path}")
 

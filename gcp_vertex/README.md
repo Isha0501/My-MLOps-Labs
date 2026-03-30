@@ -175,7 +175,6 @@ Go to **Vertex AI → Model Registry → Import**
 | Framework | scikit-learn 1.0 |
 | Artifact location | `gs://loan-default-outputs/model/` |
 
-> **📸 Screenshot: Model in Model Registry**
 
 ---
 
@@ -208,21 +207,43 @@ Go to **Vertex AI → Training → Create**
 | Budget | 1 node hour |
 | Early stopping | Enabled |
 
-![Training in progress](assets/screenshots/training_in_progress.png)
-
-> **📸 Screenshot: AutoML training completed**
+![AutoML Training Configuration](assets/screenshots/automl_training.png)
 
 ### AutoML Evaluation
 
-> **📸 Screenshot: AutoML Evaluate tab — confusion matrix and metrics**
+> **📸 Screenshot: AutoML Evaluate tab — metrics table**
+> `assets/screenshots/automl_evaluate_metrics.png`
 
-### Deploy AutoML Model to Endpoint
+![AutoML ROC curve and Precision-Recall curve](assets/screenshots/automl_eval1.png)
 
-> **📸 Screenshot: Endpoint active and ready**
+![AutoML Confusion Matrix](assets/screenshots/automl_eval2.png)
 
-### Test Predictions
+![AutoML Feature Importance](assets/screenshots/automl_eval3.png)
 
-> **📸 Screenshot: Test prediction via GCP console UI**
+| Metric | Value |
+|---|---|
+| **PR AUC** | 0.973 |
+| **ROC AUC** | 0.972 |
+| **F1 Score** | 0.90 |
+| **Precision** | 89.5% |
+| **Recall** | 90.44% |
+| **Log Loss** | 0.215 |
+
+**Confusion Matrix (at 0.5 threshold):**
+- Non-default (0): 96% correctly classified, 4% false positives
+- Default (1): 47% correctly classified, 53% missed
+
+**Top Features by Importance (Shapley values):**
+1. `Income` (~30%)
+2. `Age` (~22%)
+3. `CURRENT_JOB_YRS` (~20%)
+4. `Experience` (~18%)
+5. `CURRENT_HOUSE_YRS` (~8%)
+
+
+### Deployed Test Predictions
+
+![Test with custom input](assets/screenshots/automl_test.png)
 
 ---
 
@@ -233,7 +254,7 @@ Go to **Vertex AI → Training → Create**
 | **Code required** | None | ~80 lines |
 | **Training time** | ~60 min | ~15 min |
 | **Control** | Low | High |
-| **ROC-AUC** | TBD | 0.6974 |
+| **ROC-AUC** | 0.972 | 0.6974 |
 | **Cost** | Higher | ~$0.10 |
 | **Best for** | Quick baselines | Production pipelines |
 
