@@ -1,0 +1,16 @@
+2026-04-13 00:29:58,350 - INFO - Starting model training...
+2026-04-13 00:29:58,350 - INFO - Number of training samples: 142
+2026-04-13 00:29:58,350 - INFO - Number of testing samples: 36
+2026-04-13 00:29:58,424 - INFO - Model training completed.
+2026-04-13 00:29:58,433 - INFO - Model accuracy on test data: 1.00
+2026-04-13 00:29:58,435 - INFO - F1 Score: 1.00
+2026-04-13 00:29:58,435 - INFO - True Negative: [22 22 28]
+2026-04-13 00:29:58,435 - INFO - False Positive: [0 0 0]
+2026-04-13 00:29:58,435 - INFO - False Negative: [0 0 0]
+2026-04-13 00:29:58,435 - INFO - True Positive: [14 14  8]
+2026-04-13 00:29:58,435 - INFO - False Positive Rate: [0. 0. 0.]
+2026-04-13 00:29:58,435 - INFO - False Negative Rate: [0. 0. 0.]
+2026-04-13 00:29:58,435 - INFO - Number of trees: 100
+2026-04-13 00:29:58,439 - INFO - Feature importances: [0.10997799 0.02956867 0.00837264 0.02697043 0.03395811 0.05197746
+ 0.15139028 0.00986374 0.0204797  0.20327063 0.05852304 0.14735395
+ 0.14829335]
